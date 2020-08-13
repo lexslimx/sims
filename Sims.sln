@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sims", "Sims\Sims\Sims.csproj", "{717F9193-C0CB-4AE1-9766-9015ABDDD417}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sims.Android", "Sims\Sims.Android\Sims.Android.csproj", "{581A75CA-7432-4B76-BA63-C23E77EBFB70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{717F9193-C0CB-4AE1-9766-9015ABDDD417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717F9193-C0CB-4AE1-9766-9015ABDDD417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717F9193-C0CB-4AE1-9766-9015ABDDD417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717F9193-C0CB-4AE1-9766-9015ABDDD417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581A75CA-7432-4B76-BA63-C23E77EBFB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581A75CA-7432-4B76-BA63-C23E77EBFB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581A75CA-7432-4B76-BA63-C23E77EBFB70}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{581A75CA-7432-4B76-BA63-C23E77EBFB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581A75CA-7432-4B76-BA63-C23E77EBFB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581A75CA-7432-4B76-BA63-C23E77EBFB70}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61A492B8-DF20-454A-8248-7423C4C85D86}
+	EndGlobalSection
+EndGlobal
