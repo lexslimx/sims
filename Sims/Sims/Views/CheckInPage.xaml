@@ -5,8 +5,21 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Sims.Views.CheckInPage"
              Title="CheckIn" Icon="ic_action_add_circle">
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Label Text="Welcome Home" TextColor="green"></Label>
-        </StackLayout>
- 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="0.1"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Entry Placeholder="Nin Number"  Grid.Row="0" Grid.ColumnSpan="2"
+               HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+        <Button Text="CheckIn" Grid.Row="4" Grid.Column="0"></Button>
+        <Button Text="CheckOut" Grid.Row="4" Grid.Column="1"></Button>
+    </Grid>
 </ContentPage>
