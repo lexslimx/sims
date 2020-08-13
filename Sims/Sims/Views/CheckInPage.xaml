@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Entry Placeholder="Nin Number"  Grid.Row="0" Grid.ColumnSpan="2"
+        <Entry Placeholder="Nin Number"  Keyboard="Telephone" Grid.Row="0" Grid.ColumnSpan="2"
                HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
         <Button Text="CheckIn" Grid.Row="4" Grid.Column="0"></Button>
         <Button Text="CheckOut" Grid.Row="4" Grid.Column="1"></Button>
