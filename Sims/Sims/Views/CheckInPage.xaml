@@ -12,14 +12,25 @@
             <RowDefinition Height="4*"></RowDefinition>
             <RowDefinition Height="0.1"></RowDefinition>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Entry Placeholder="Nin Number"  Keyboard="Telephone" Grid.Row="0" Grid.ColumnSpan="2"
+        <Button ImageSource="ic_action_format_align_justify.png"
+                Command="{Binding OpenScannerCommand}"
+                Grid.Row="0" Grid.Column="3"></Button>
+
+        <Entry Placeholder="Nin Number" Text="{Binding NinNumber}"
+               Keyboard="Telephone" Grid.Row="0" Grid.ColumnSpan="3"
                HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
-        <Button Text="CheckIn" Grid.Row="4" Grid.Column="0"></Button>
-        <Button Text="CheckOut" Grid.Row="4" Grid.Column="1"></Button>
+
+        <Button Text="CheckIn" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" >
+        </Button>
+
+        <Button Text="CheckOut" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" >
+        </Button>
     </Grid>
 </ContentPage>

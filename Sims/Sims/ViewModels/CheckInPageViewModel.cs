@@ -4,44 +4,40 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
-using ZXing.Net.Mobile.Forms;
 using System.Threading.Tasks;
 using ZXing.Mobile;
-using ZXing;
+using ZXing.Net.Mobile.Forms;
 
 namespace Sims.ViewModels
 {
     public class CheckInPageViewModel : BindableBase
     {
         private INavigation _navigation { get; set; }
-        ZXingScannerPage scanPage;
         public CheckInPageViewModel(INavigation navigation)
         {
             _navigation = navigation;
         }
 
-
-
-        async Task OpenScannerAsync()
+        async void OpenScannerAsync()
         {
             //setup options
             var options = new MobileBarcodeScanningOptions
             {
                 AutoRotate = false,
                 UseFrontCameraIfAvailable = true,
-                TryHarder = true           
+                TryHarder = true
             };
 
             //add options and customize page
-            scanPage = new ZXingScannerPage(options)
+            var scanPage = new ZXingScannerPage(options)
             {
                 DefaultOverlayTopText = "Align the barcode within the frame",
                 DefaultOverlayBottomText = string.Empty,
-                DefaultOverlayShowFlashButton = true
+                DefaultOverlayShowFlashButton = false
             };
 
             // Navigate to our scanner page
-            await _navigation.PushAsync(scanPage);
+            //await _navigation.PushAsync(scanPage);
 
             scanPage.OnScanResult += (result) =>
             {
@@ -51,11 +47,25 @@ namespace Sims.ViewModels
                 // Pop the page and show the result
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    await _navigation.PopAsync();                  
+                    await _navigation.PopAsync();
                 });
             };
         }
 
+        private DelegateCommand _openScannerCommand;
+        public DelegateCommand OpenScannerCommand => _openScannerCommand ?? (_openScannerCommand = new DelegateCommand(OpenScannerAsync));
 
+        private string _ninNumber;
+        public string NinNumber
+        {
+            get
+            {
+                return _ninNumber;
+            }
+            set
+            {
+                SetProperty(ref _ninNumber, value);
+            }
+        }
     }
 }
